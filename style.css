@@ -1,0 +1,417 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.homepage{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 100%;
+    margin-bottom: -28rem;
+}
+.header{
+    top: -57rem;
+    color: #ffffff;
+    position: relative;
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+    gap: 20rem;
+    left: 8vh;
+}
+
+.symbol{
+    position: relative;
+    display: flex;
+    font-size: 5vh;
+}
+
+.nav-bar{
+    top: 2rem;
+    display: flex;
+    position: relative;
+    height: fit-content;
+    gap: 40px;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 5px;
+    left: 40vh;
+}
+
+.nav-bar a{
+    font-size: 3vh;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px;  
+}
+
+.Nav-button-Home {
+    color: #ffffff;
+}
+
+.Nav-button-About {
+    color: #ffffff;
+}
+
+.Nav-button-Contact {
+    color: #ffffff;
+}
+
+.Nav-button-Book {
+    color: #000000;
+}
+
+.homepage-image{
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.homepage h1{
+    padding: 2rem;
+    position: relative;
+    display: flex;
+    top: -90vh;    
+    left: 25%;
+    color: #ffffff;
+}
+
+.aboutus{
+    width: 1700px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    background-color: #ffffff;
+    top: -75vh;
+    margin-bottom: -40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatwedo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 100px;
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 1000px;
+    align-items: center;
+}
+
+.whatwedo h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.whatwedo p {
+    line-height: 1.6;
+    color: #666;
+}
+
+.whatwedo h4 {
+    font-size: 20px;
+    margin-top: 30px;
+    color: #333;
+    margin-bottom: 0;
+}
+
+/* Social Media Icons */
+.social{
+    flex-direction: row;
+    font-size: 35px;
+}
+
+.social i{
+    margin: 10px;
+    transition: color 0.3s ease;
+}
+
+.whatwedo i:hover {
+    color: #007bff;
+}
+
+.insta {
+    color: #c13584;
+}
+
+.twitter {
+    color: #1da1f2;
+}
+
+.linkedin {
+    color: #0077b5;
+}
+
+
+.chat-container {
+    top: 27vh;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #a2b2c4;
+    border-radius: 10px 10px 10px 10px ;
+    
+}
+
+/* Chat header */
+.chat-header {
+    background-color: #1b508a;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px 10px 0 0 ;
+}
+
+.chat-header h2 {
+    margin: 0;
+}
+
+/* Chat box styling */
+.chat-box {
+    padding: 10px;
+    background-color: #a2b2c4;
+    height: 87vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Chat input area */
+.chat-input-area {
+    display: flex;
+    bottom: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #a2b2c4;
+    position: sticky;
+    
+}
+
+#userInput {
+    flex: 1;
+    padding-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#sendBtn {
+    background-color: #1b508a;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#sendBtn:hover {
+    background-color: #2c64a0;
+}
+
+/* Bot message styling */
+.bot-message {
+    align-self: flex-start;
+    background-color: #1b508a;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px 10px 10px 0;
+    margin-bottom: 20px;
+    max-width: 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+.bot-message .sender-label p{
+    font-weight: bolder;
+    margin: 0;
+    font-size: 15px;
+}
+
+.bot-message .message-text p {
+    margin: 5px 0 0 0;
+    font-size: 18px;
+}
+
+/* User message styling */
+.user-message {
+    align-self: flex-end;
+    background-color: #f0f0f0;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 10px 10px 0 10px;
+    margin-bottom: 10px;
+    max-width: 95%;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-message .sender-label p {
+    font-weight: bolder;
+    margin: 0;
+    font-size: 15px;
+    text-align: right;
+}
+
+.user-message .message-text p {
+    margin: 5px 0 0 0;
+    font-size: 18px;
+}
+
+
+/* Scrollbar styling */
+.chat-box::-webkit-scrollbar {
+    width: 3px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background-color: #1b508a;
+    border-radius: 5px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+    background-color: #a2b2c4;
+}
+
+
+.contactus {
+    position: relative;
+    display: flex;
+    top: -65vh;
+    left:3%;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 40%;
+    align-items: center;
+    height: 80vh;
+    margin-bottom: -62.5vh;
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    position: relative;
+    max-width: 100%;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #1da1f2; /* Twitter blue for links on hover */
+}
+
+footer .social-icons i {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons i:hover {
+    color: #f39c12; /* Golden color for hover effect on icons */
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+footer .social-icons {
+    margin-bottom: 15px;
+}
+
+body::-webkit-scrollbar{
+    width: 0px;
+}
+
+@media only screen and (max-width: 768px) {
+    .homepage {
+      flex-direction: column;
+    }
+    .header {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .nav-bar {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .chat-container {
+      width: 90%;
+      left: 5%;
+    }
+    .contactus {
+      width: 90%;
+      left: 5%;
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .homepage {
+      flex-direction: column;
+    }
+    .header {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .nav-bar {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .chat-container {
+      width: 80%;
+      left: 10%;
+    }
+    .contactus {
+      width: 80%;
+      left: 10%;
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  a {
+    transition: all 0.3s ease; /* Smooth transition over 0.3 seconds */
+  }
+  
+  a:hover {
+    opacity: 0.7; /* Dim on hover */
+    transform: scale(1.05); /* Slightly zoom in */
+  }
+
+  .textinput::-webkit-input-placeholder {
+    color: #999; 
+    font-size: 16px; 
+    font-style: italic;
+    position: relative;
+    display: flex;
+    bottom: 50%;
+    left: 10px;
+  }
