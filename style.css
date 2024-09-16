@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    background-color: #ded2bb;
 }
 
 .homepage{
@@ -9,39 +9,39 @@ body{
     display: flex;
     flex-wrap: wrap;
     max-height: 100%;
-    margin-bottom: -28rem;
+    margin-bottom: -72vh;
 }
 .header{
-    top: -57rem;
+    top: -145vh;
     color: #ffffff;
     position: relative;
     display: flex;
     max-width: 100%;
     justify-content: space-between;
-    gap: 20rem;
-    left: 8vh;
+    gap: 25vw;
+    left: 3.5vw;
 }
 
 .symbol{
     position: relative;
     display: flex;
-    font-size: 5vh;
+    font-size: 2.5rem;
 }
 
 .nav-bar{
-    top: 2rem;
+    top: 4vh;
     display: flex;
     position: relative;
     height: fit-content;
-    gap: 40px;
-    backdrop-filter: blur(10px);
+    gap: 2.5vw;
+    backdrop-filter: blur(3vw);
     border-radius: 10px;
     padding: 5px;
-    left: 40vh;
+    left: 18vw;
 }
 
 .nav-bar a{
-    font-size: 3vh;
+    font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
     padding: 8px;  
@@ -64,51 +64,52 @@ body{
 }
 
 .homepage-image{
-    width: 100%;
+    max-width: 100%;
     display: flex;
     position: relative;
 }
 
 .homepage h1{
+    font-size: 3vw;
     padding: 2rem;
     position: relative;
     display: flex;
     top: -90vh;    
-    left: 25%;
+    left: 20%;
     color: #ffffff;
 }
 
 .aboutus{
-    width: 1700px;
-    height: 300px;
+    max-width: 100%;
+    max-height: 100%;
     position: relative;
     display: flex;
     background-color: #ffffff;
     top: -75vh;
     margin-bottom: -40px;
-    align-items: center;
-    justify-content: center;
+   
 }
 
 .whatwedo {
     position: relative;
     display: flex;
     flex-direction: column;
-    top: 100px;
-    background-color: #ffffff;
+    top: -70vh;
+    left: 19%;
+    background-color:#f6f3ef;
     padding: 30px;
-    margin-bottom: 30px;
+    margin-bottom: -18vh;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     text-align: center;
-    max-width: 1000px;
+    max-width: 60%;
     align-items: center;
 }
 
 .whatwedo h2 {
-    font-size: 28px;
+    font-size: 2rem;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 3vh;
 }
 
 .whatwedo p {
@@ -117,8 +118,8 @@ body{
 }
 
 .whatwedo h4 {
-    font-size: 20px;
-    margin-top: 30px;
+    font-size: 1.25rem;
+    margin-top: 2vh;
     color: #333;
     margin-bottom: 0;
 }
@@ -126,11 +127,11 @@ body{
 /* Social Media Icons */
 .social{
     flex-direction: row;
-    font-size: 35px;
+    font-size: 2rem;
 }
 
 .social i{
-    margin: 10px;
+    margin: 1vw;
     transition: color 0.3s ease;
 }
 
@@ -182,21 +183,23 @@ body{
 .chat-box {
     padding: 10px;
     background-color: #a2b2c4;
-    height: 87vh;
+    height: 90vh;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+    margin-bottom:2vh;
 }
 
 /* Chat input area */
 .chat-input-area {
     display: flex;
-    bottom: 0;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    background-color: #a2b2c4;
-    position: sticky;
     
+    padding: 10px;
+    max-width: 90%;
+    left: 5%;
+    background-color: #2f2f24;
+    position: sticky;
+    border-radius: 10px;
 }
 
 #userInput {
@@ -211,7 +214,7 @@ body{
     color: white;
     border: none;
     padding: 10px;
-    margin-left: 10px;
+    margin-left: 1vw;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -227,7 +230,7 @@ body{
     color: white;
     padding: 10px 15px;
     border-radius: 10px 10px 10px 0;
-    margin-bottom: 20px;
+    margin-bottom: 1.25vh;
     max-width: 75%;
     display: flex;
     flex-direction: column;
@@ -236,12 +239,12 @@ body{
 .bot-message .sender-label p{
     font-weight: bolder;
     margin: 0;
-    font-size: 15px;
+    font-size: .95rem;
 }
 
 .bot-message .message-text p {
-    margin: 5px 0 0 0;
-    font-size: 18px;
+    margin: 1vh 0 0 0;
+    font-size: 1.15rem;
 }
 
 /* User message styling */
@@ -251,7 +254,7 @@ body{
     color: black;
     padding: 10px 15px;
     border-radius: 10px 10px 0 10px;
-    margin-bottom: 10px;
+    margin-bottom: 1vh;
     max-width: 95%;
     display: flex;
     flex-direction: column;
@@ -260,19 +263,19 @@ body{
 .user-message .sender-label p {
     font-weight: bolder;
     margin: 0;
-    font-size: 15px;
+    font-size: .95rem;
     text-align: right;
 }
 
 .user-message .message-text p {
-    margin: 5px 0 0 0;
-    font-size: 18px;
+    margin: 1vh 0 0 0;
+    font-size: 1.15rem;
 }
 
 
 /* Scrollbar styling */
 .chat-box::-webkit-scrollbar {
-    width: 3px;
+    width: .4vw;
 }
 
 .chat-box::-webkit-scrollbar-thumb {
@@ -288,9 +291,9 @@ body{
 .contactus {
     position: relative;
     display: flex;
-    top: -65vh;
+    top: -66vh;
     left:3%;
-    background-color: #ffffff;
+    background-color:#f6f3ef;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -301,10 +304,27 @@ body{
     margin-bottom: -62.5vh;
 }
 
+.contactus h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 3vh;
+}
+
+.contactus p {
+    line-height: 1.6;
+    color: #666;
+}
+
+.contactus h4 {
+    font-size: 1.25rem;
+    margin-top: 2vh;
+    color: #333;
+    margin-bottom: 0;
+}
 
 /* Footer Styling */
 footer {
-    background-color: #000000;
+    background-color: #2f2f24;
     color: #ffffff;
     text-align: center;
     padding: 20px;
@@ -393,6 +413,177 @@ body::-webkit-scrollbar{
     }
   }
 
+
+
+
+
+
+  @media only screen and (min-width: 1600px ) {
+    .homepage {
+      flex-direction: row;
+    }
+    .header {
+      flex-direction: row;
+      gap: 45vh;
+      top: -125vh;
+    }
+    .nav-bar {
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    .homepage h1{
+        left: 18%;
+        top: -80vh;
+        font-size: 6.5vh;
+    }
+
+    .aboutus{
+        position: relative;
+        display: flex;
+        top: -65vh;
+    }
+
+    .whatwedo {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        top: 150px;
+        background-color: #ffffff;
+        padding: 40px;
+        margin-bottom: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        max-width:1200px;
+        align-items: center;
+    }
+    
+    .whatwedo h2 {
+        font-size: 45px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    
+    .whatwedo p {
+        font-size: 20px;
+        line-height: 1.6;
+        color: #666;
+    }
+    
+    .whatwedo h4 {
+        font-size: 30px;
+        margin-top: 30px;
+        color: #333;
+        margin-bottom: 0;
+    }
+    
+    /* Social Media Icons */
+    .social{
+        flex-direction: row;
+        font-size: 35px;
+    }
+    
+    .social i{
+        margin: 10px;
+        transition: color 0.3s ease;
+    }
+    
+    .whatwedo i:hover {
+        color: #000000;
+    }
+    
+    .insta {
+        color: #c13584;
+    }
+    
+    .twitter {
+        color: #1da1f2;
+    }
+    
+    .linkedin {
+        color: #0077b5;
+    }
+    
+
+    .chat-container {
+      width: 50%;
+      right: 2%;
+      margin-bottom: 2.5vh;
+    }
+
+    .bot-message .sender-label p {
+        font-weight: bolder;
+        margin: 0;
+        font-size: 18px;
+    }
+    
+    .bot-message .message-text p {
+        margin: 5px 0 0 0;
+        font-size: 20px;
+    }
+
+    .user-message .sender-label p {
+        font-weight: bolder;
+        margin: 0;
+        font-size: 18px;
+        text-align: right;
+    }
+    
+    .user-message .message-text p {
+        margin: 5px 0 0 0;
+        font-size: 20px;
+    }
+
+    .chat-input-area{
+        padding: 10px;
+        width: 90%;
+        left: 5%;
+        border-radius: 10px;
+    }
+
+    .contactus {
+        top: -67vh;
+      width: 80%;
+      left: 3%;
+    }
+
+    .contact h2 {
+        font-size: 45px;
+        color: #333;
+        margin-bottom: 20px;
+        margin-top: 2px;
+    }
+    
+    .contact p {
+        font-size: 20px;
+        line-height: 1.6;
+        color: #666;
+    }
+    
+    .contact h4 {
+        font-size: 30px;
+        margin-top: 30px;
+        color: #333;
+        margin-bottom: 0;
+    }
+
+    
+
+    footer p {
+        margin: 10px 0;
+        font-size: 20px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+    
+    footer .social-icons {
+        margin-bottom: 25px;
+    }
+    
+
+  }
+
   html {
     scroll-behavior: smooth;
   }
@@ -415,3 +606,5 @@ body::-webkit-scrollbar{
     bottom: 50%;
     left: 10px;
   }
+
+  
