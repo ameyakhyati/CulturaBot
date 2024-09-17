@@ -1,10 +1,22 @@
-@import url('assests/fonts/FELIXTI.TTF');
-@import url('assests/fonts/pala.ttf');
-@import url('assests/fonts/GARA.TTF');
-@import url('assests/fonts/GOUDOS.TTF');
-
-
-
+@font-face {
+    font-family: "Felix Titling";
+    src: url("https://drive.google.com/file/d/1LNMIob6JGemT2BcxVibcj5QkTDALcHO5/view?usp=sharing") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Garamond Regular";
+    src: url("https://drive.google.com/file/d/17KYE_sC-B5Hiwk-C32zOyc6WV22rlQ3_/view?usp=sharing") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Palatino Linotype";
+    src: url("https://drive.google.com/file/d/19xZIKKebp1CveLJcHhafXIBar7LXW3hs/view?usp=sharing") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Goudy Old Style";
+    src: url("https://drive.google.com/file/d/1xT6zouyeEGCe6LuB9KOOWQdIM-wL_Zo5/view?usp=sharing") format("truetype");
+  }
 
 body{
     margin: 0;
