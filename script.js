@@ -1,62 +1,88 @@
-// Configuration
-const rasaUrl = 'https://your-rasa-server.com/webhooks/rest/webhook'; // Replace with your Rasa URL
+// Get the chatbox, input, and send button elements
+const chatbox = document.getElementById('chatbox');
+const userInput = document.getElementById('userInput');
+const sendBtn = document.getElementById('sendBtn');
 
-const chatbox = document.getElementById('chatbox'); 
+// Get the chat container where messages will be rendered
+const chatContainer = document.querySelector(".chat-container");
 
-// Function to send messages to the chatbot
-function sendMessage(message) {
-  const request = new XMLHttpRequest();
-  request.open('POST', rasaUrl);
-  request.setRequestHeader('Content-Type', 'application/json');
-  request.onload = function() {
-    if (request.status >= 200 && request.status < 400) {
-      const response = JSON.parse(request.response);
-      // Process the chatbot's response 
-      displayMessage(response); 
-    } else {
-      console.error('Error sending message to Rasa');
-    }
-  };
-  request.onerror = function() {
-    console.error('Network error');
-  };
-  const data = JSON.stringify({ message: message });
-  request.send(data);
+// Set up the Rasa bot connection
+const rasaUrl = 'http://localhost:5002/api'; // Replace with your Rasa bot URL
+
+// Function to send a message to the Rasa bot
+async function sendMessage() {
+  const userInputValue = userInput.value.trim();
+  if (userInputValue !== '') {
+    // Render user message
+    renderUserMessage(userInputValue);
+
+    // Clear the user's input field
+    userInput.value = '';
+
+    // Send the user's message to the Rasa bot
+    const response = await fetch(`${rasaUrl}/conversations/default/respond`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ message: userInputValue })
+    });
+
+    // Get the response from the Rasa bot
+    const botResponse = await response.json();
+
+    // Render bot response
+    renderBotMessage(botResponse.response);
+  }
 }
 
-// Function to display messages in the chatbox
-function displayMessage(response) {
-  response.forEach(message => {
-    const messageElement = document.createElement('div');
-    messageElement.textContent = message.text; // Assuming 'text' is the Rasa response text
-    chatbox.appendChild(messageElement);
-  });
+// Function to render user messages
+function renderUserMessage(message) {
+  const userMessageDiv = document.createElement("div");
+  userMessageDiv.classList.add("user-message");
+  userMessageDiv.innerHTML = `
+    <div class="sender-label">
+      <p>User</p>
+    </div>
+    <div class="message-text">
+      <p>${message}</p>
+    </div>
+  `;
+  chatContainer.querySelector("#chatbox").appendChild(userMessageDiv);
+  scrollToBottomSmoothly();
 }
 
-// Example user input (using a simple button for demonstration)
-const sendButton = document.getElementById('sendButton');
-sendButton.addEventListener('click', () => {
-  const userMessage = document.getElementById('userMessage').value;
-  sendMessage(userMessage);
-  // Clear the input field
-  document.getElementById('userMessage').value = '';
+// Function to render bot messages
+function renderBotMessage(message) {
+  const botMessageDiv = document.createElement("div");
+  botMessageDiv.classList.add("bot-message");
+  botMessageDiv.innerHTML = `
+    <div class="sender-label">
+      <p>Bot</p>
+    </div>
+    <div class="message-text">
+      <p>${message}</p>
+    </div>
+  `;
+  chatContainer.querySelector("#chatbox").appendChild(botMessageDiv);
+  scrollToBottomSmoothly();
+}
+
+// Function to scroll to the bottom of the chatbox smoothly
+function scrollToBottomSmoothly() {
+  chatbox.scrollTop = chatbox.scrollHeight;
+  chatbox.scrollTo({ top: chatbox.scrollHeight, behavior: 'smooth' });
+}
+
+// Add an event listener to the send button
+sendBtn.addEventListener('click', sendMessage);
+
+// Add an event listener to the enter key press
+userInput.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    sendMessage();
+  }
 });
 
-const chatBubble = document.querySelector('.chat-bubble'); 
-
-function showChatBubble() {
-  chatBubble.style.opacity = 1;
-}
-
-function hideChatBubble() {
-  chatBubble.style.opacity = 0;
-}
-
-// Trigger on events like button click
-chatBubble.addEventListener('click', showChatBubble);
-
-const userInput = document.getElementById("userInput");
-        
-        userInput.addEventListener("focus", function() {
-            this.placeholder = " "; // Clear placeholder on focus
-          });
+// Initialize the chat conversation with a bot message
+renderBotMessage("Hello, how may I help you?");
