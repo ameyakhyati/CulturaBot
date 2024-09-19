@@ -26,6 +26,7 @@ body{
     
 }
 
+
 .homepage{
     position: relative;
     display: flex;
@@ -149,6 +150,7 @@ body{
     text-align: center;
     max-width: 25%;
     top: -5vh;
+    margin-bottom: 0;
 }
 
 .reviews h2{
@@ -159,7 +161,7 @@ body{
 
 .review{
     text-align: left;
-    margin-top: 4vh;
+ 
 }
 
 .review h4{
@@ -236,7 +238,7 @@ body{
 .chat-box {
     padding: 10px;
     background-color: #2f2f247c;
-    max-height: 70vh;
+    height: 70vh;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -278,7 +280,9 @@ body{
 }
 
 
-#sendBtn {
+#sendBtn, 
+#payBtn,
+#leave {
     background-color: #2f2f24;
     color: white;
     border: none;
@@ -288,10 +292,34 @@ body{
     cursor: pointer;
     font-size: 1.25rem;
     font-family: "Goudy Old Stlye";
-
 }
 
-#sendBtn:hover {
+.pay-button-container{
+    left: 60%;
+    position: relative;
+    display: flex;
+    gap: 2px;
+    max-width: fit-content;
+}
+
+#payBtn{
+    padding: 4vh;
+    position: relative;
+    width: 10vw;
+}
+
+
+
+#leave{
+    padding: 2vh;
+    position: relative;
+    width: 100%;
+    bottom: 0;    
+}
+
+#sendBtn:hover,
+#payBtn:hover,
+#leave:hover {
     background-color: #f6f3ef;
     color: #000000;
     transition: 0.4s ease;
@@ -314,11 +342,13 @@ body{
     font-weight: bolder;
     margin: 0;
     font-size: .95rem;
+    line-height: 1.2;
 }
 
 .bot-message .message-text p {
     margin: 1vh 0 0 0;
     font-size: 1.15rem;
+    line-height: 1.2;
 }
 
 /* User message styling */
@@ -332,6 +362,7 @@ body{
     max-width: 95%;
     display: flex;
     flex-direction: column;
+    line-height: 1.5;
 }
 
 .user-message .sender-label p {
@@ -344,6 +375,7 @@ body{
 .user-message .message-text p {
     margin: 1vh 0 0 0;
     font-size: 1.15rem;
+    line-height: 1.5;
 }
 
 
@@ -488,6 +520,96 @@ a {
     display: flex;
 }
 
+.payment-container {
+    max-width: 40vw;
+    max-height: max-content;
+    margin: 4vh auto;
+    padding: .5vh;
+    background-color:#f6f3ef;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: "Goudy Old Style";
+}
+
+.payment-container h1{
+    position: relative;
+    top: -3vh;
+}
+
+.payment-container p{
+    position: relative;
+    top: -7vh;
+    font-size: larger;
+}
+
+.payment-container img{
+    max-width: 65%;
+    position: relative;
+    margin-bottom: -1vh;
+    top: -4vh;
+}
+
+.payment-container a{
+    cursor:default;
+    text-decoration: none;
+}
+
+.timer-container {
+    position: relative;
+    top: -6vh;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    position: relative;
+}
+
+.progress-bar::after {
+    content: '';
+    display: block;
+    height: 100%;
+    background-color: #678ed6; /* Change color as needed */
+    border-radius: 10px;
+    width: 100%; /* Will be reduced by JavaScript */
+    transition: width 0.1s linear;
+}
+
+.timer {
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+
+.confirmation {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+    font-family: "Goudy Old Style";
+    color: #000;
+    
+}
+
+.confirmation h2{
+    position: relative;
+    color: #000;
+    top: -6vh;
+    left: 0;
+}
+
+.confirm{
+    font-size: 30vh;
+}
 
 @media screen and (max-width: 475px){
     .header{
