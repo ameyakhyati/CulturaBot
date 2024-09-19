@@ -292,8 +292,8 @@ body{
     cursor: pointer;
     font-size: 1.25rem;
     font-family: "Goudy Old Stlye";
-}
 
+}
 .pay-button-container{
     left: 60%;
     position: relative;
@@ -306,6 +306,7 @@ body{
     padding: 4vh;
     position: relative;
     width: 10vw;
+ 
 }
 
 
@@ -524,68 +525,84 @@ a {
     max-width: 40vw;
     max-height: max-content;
     margin: 4vh auto;
-    padding: .5vh;
-    background-color:#f6f3ef;
+    padding: 0.5vh;
+    background-color: #f6f3ef;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    align-items: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
     font-family: "Goudy Old Style";
 }
 
-.payment-container h1{
+.payment-container h1 {
     position: relative;
     top: -3vh;
+    font-size: 3.5vw; /* Responsive font size */
+    text-align: center;
 }
 
-.payment-container p{
+.payment-container p {
     position: relative;
     top: -7vh;
-    font-size: larger;
+    font-size: 2vw; /* Responsive font size */
+    text-align: center;
 }
 
-.payment-container img{
+.payment-container img {
     max-width: 65%;
     position: relative;
     margin-bottom: -1vh;
     top: -4vh;
+    width: auto;
+    height: auto;
 }
 
-.payment-container a{
-    cursor:default;
+.payment-container a {
+    cursor: default;
     text-decoration: none;
+    font-size: 2vw; /* Responsive font size */
 }
 
-.timer-container {
-    position: relative;
-    top: -6vh;
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .payment-container {
+        max-width: 90vw; /* Increased for smaller screens */
+        padding: 2vh;
+    }
+
+    .payment-container h1 {
+        font-size: 5vw; /* Adjusted for smaller screens */
+        top: -2vh;
+    }
+
+    .payment-container p {
+        font-size: 3.5vw; /* Adjusted for smaller screens */
+        top: -5vh;
+    }
+
+    .payment-container img {
+        max-width: 80%; /* Adjust image size for smaller screens */
+    }
+
+    .payment-container a {
+        font-size: 3.5vw; /* Adjusted for smaller screens */
+    }
 }
 
-.progress-bar {
-    width: 100%;
-    height: 10px;
-    background-color: #e0e0e0;
-    border-radius: 10px;
-    position: relative;
-}
+/* Media query for larger screens */
+@media (min-width: 1024px) {
+    .payment-container h1 {
+        font-size: 2vw; /* Adjusted for larger screens */
+    }
 
-.progress-bar::after {
-    content: '';
-    display: block;
-    height: 100%;
-    background-color: #678ed6; /* Change color as needed */
-    border-radius: 10px;
-    width: 100%; /* Will be reduced by JavaScript */
-    transition: width 0.1s linear;
-}
+    .payment-container p {
+        font-size: 1.5vw; /* Adjusted for larger screens */
+    }
 
-.timer {
-    margin-top: 10px;
-    font-size: 24px;
+    .payment-container a {
+        font-size: 1.5vw; /* Adjusted for larger screens */
+    }
 }
 
 
